@@ -1,0 +1,11 @@
+Problem 1:
+
+In Sprite, the data field that would be the best candidate would be mTransform. This is because, even other game objects
+other than Sprites have translation, scale. Other fields are about drawing quads with textures but transforms would apply to collision objects, cameras, physical objects.
+
+-----------
+Problem 2:
+
+
+As this alpha blending operation is not commutative, the final color depends on the order that the translucent sprites are drawn in.
+To render multiple sprites, they have to be sorted by depth and drawn from back to front, so that all sprites visually blend with the sprites that are behind them.
